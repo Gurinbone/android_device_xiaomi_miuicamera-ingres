@@ -13,6 +13,7 @@ allow platform_app vendor_camera_data_file:dir { append map r_dir_perms write };
 allow platform_app vendor_camera_data_file:file { getattr open read };
 
 allow platform_app app_data_file:file execute;
+dontaudit platform_app vendor_file:file r_file_perms;
 
 # Properties
 get_prop(platform_app, vendor_camera_sensor_prop)
